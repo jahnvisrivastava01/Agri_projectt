@@ -1,4 +1,4 @@
-const apiBase = "http://127.0.0.1:5000/api";
+const apiBase = "https://agriproject-u5kq.onrender.com/api";
 
 function showNotification(id, message, isSuccess) {
     const el = document.getElementById(id);
