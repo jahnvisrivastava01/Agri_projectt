@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MRV Agroforestry Prototype</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>MRV Agroforestry & Rice Carbon </h1>
+
+    <div class="container">
+
+        <!-- Add Farmer -->
+        <div class="card">
+            <h2>1️⃣ Add Farmer</h2>
+            <input type="text" id="farmerName" placeholder="Farmer Name">
+            <input type="text" id="farmerPhone" placeholder="Phone">
+            <button id="addFarmerBtn">Add Farmer</button>
+            <div id="farmerResult" class="notification"></div>
+        </div>
+
+        <!-- Add Plot -->
+        <div class="card">
+            <h2>2️⃣ Add Plot</h2>
+            <input type="number" id="plotFarmerId" placeholder="Farmer ID">
+            <input type="number" id="plotArea" placeholder="Area (ha)">
+            <button id="addPlotBtn">Add Plot</button>
+            <div id="plotResult" class="notification"></div>
+        </div>
+
+        <!-- Add Measurement -->
+        <div class="card">
+            <h2>3️⃣ Add Measurement</h2>
+            <input type="number" id="measurePlotId" placeholder="Plot ID">
+            <input type="text" id="species" placeholder="Species">
+            <input type="number" id="dbh" placeholder="DBH (cm)">
+            <input type="number" id="height" placeholder="Height (m)">
+            <input type="text" id="samplePoint" placeholder="Sample Point">
+            <button id="addMeasurementBtn">Add Measurement</button>
+            <div id="measurementResult" class="notification"></div>
+        </div>
+
+        <!-- Calculate Carbon -->
+        <div class="card">
+            <h2>4️⃣ Calculate Carbon</h2>
+            <input type="number" id="carbonPlotId" placeholder="Plot ID">
+            <button id="calculateCarbonBtn">Calculate</button>
+            <div id="carbonResult" class="notification"></div>
+        </div>
+
+        <!-- Dashboard -->
+        <div class="card">
+            <h2>5️⃣ Dashboard</h2>
+            <button id="loadDashboardBtn">Load Dashboard</button>
+            <button id="exportCSVBtn">Export CSV</button>
+            <div id="dashboardResult" style="overflow-x:auto; margin-top:15px;"></div>
+        </div>
+
+    </div>
+
+    <!-- Scripts -->
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+    <script src="{{ url_for('static', filename='dashboard.js') }}"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
